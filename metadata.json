@@ -1,0 +1,7 @@
+{
+  "name": "个人智能体工作台-注册/新建商品/订单/会话",
+  "description": "移动端个人智能体商家工作台，集成 AI 客服、商品管理、订单处理及数据分析功能。",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
