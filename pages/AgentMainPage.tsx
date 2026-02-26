@@ -191,14 +191,23 @@ const AgentMainPage: React.FC<{ navigateTo: (p: any) => void }> = ({ navigateTo 
           </div>
 
           {/* Info Content - Horizontal Layout */}
-          <div className="pl-20 pt-1"> 
-             <div className="flex items-center space-x-2">
-               <h2 className="text-lg font-black text-slate-900 tracking-tight">王小明</h2>
-               <div className="text-blue-500 bg-blue-50 p-1 rounded-md">
-                 <Gem size={14} fill="currentColor" className="text-blue-500" />
+          <div className="pl-20 pt-1 flex justify-between items-start"> 
+             <div>
+               <div className="flex items-center space-x-2">
+                 <h2 className="text-lg font-black text-slate-900 tracking-tight">王小明</h2>
+                 <div className="text-blue-500 bg-blue-50 p-1 rounded-md">
+                   <Gem size={14} fill="currentColor" className="text-blue-500" />
+                 </div>
                </div>
+               <p className="text-[10px] text-slate-500 mt-1 font-bold">金牌地陪 | 贵州旅游行程助手</p>
              </div>
-             <p className="text-[10px] text-slate-500 mt-1 font-bold">金牌地陪 | 贵州旅游行程助手</p>
+             
+             {/* Certificate Entry */}
+             <button className="flex items-center space-x-1 bg-slate-50 border border-slate-100 px-2.5 py-1.5 rounded-full active:bg-slate-100 transition-colors">
+                <ShieldCheck size={12} className="text-green-600" />
+                <span className="text-[10px] font-bold text-slate-600">已实名</span>
+                <ChevronRight size={10} className="text-slate-400" />
+             </button>
           </div>
         </div>
       </div>
