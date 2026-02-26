@@ -165,16 +165,16 @@ const AgentMainPage: React.FC<{ navigateTo: (p: any) => void }> = ({ navigateTo 
     <div className="min-h-full bg-white flex flex-col relative pb-52">
       {/* Header - REAL PERSON AVATAR */}
       <div className="relative pt-10 pb-6 px-6 overflow-hidden bg-slate-50">
-        {/* Modern Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-100/40 via-indigo-50/40 to-white opacity-80"></div>
-        
-        {/* Decorative Orbs */}
-        <div className="absolute -top-24 -right-24 w-80 h-80 bg-blue-400/20 rounded-full blur-[60px] mix-blend-multiply animate-pulse"></div>
-        <div className="absolute top-20 -left-20 w-60 h-60 bg-purple-400/20 rounded-full blur-[60px] mix-blend-multiply opacity-70"></div>
-        <div className="absolute bottom-0 right-1/4 w-40 h-40 bg-pink-300/20 rounded-full blur-[40px] mix-blend-multiply opacity-60"></div>
-        
-        {/* Mesh Grid Pattern (Optional subtle texture) */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] mask-image-gradient-to-b"></div>
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+            className="w-full h-full object-cover" 
+            alt="Landscape Background" 
+          />
+          {/* Gradient Overlay for text readability */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-white/40 to-white"></div>
+        </div>
 
         <div className="relative z-10 flex items-center space-x-5">
           <div className="relative">
