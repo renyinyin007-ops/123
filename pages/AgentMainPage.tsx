@@ -163,60 +163,56 @@ const AgentMainPage: React.FC<{ navigateTo: (p: any) => void }> = ({ navigateTo 
 
   return (
     <div className="min-h-full bg-white flex flex-col relative pb-52">
-      {/* Header - IMMERSIVE BACKGROUND */}
-      <div className="relative h-[380px] w-full overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <img 
-            src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-            className="w-full h-full object-cover" 
-            alt="Landscape Background" 
-          />
-          {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-white"></div>
-        </div>
+      {/* Header - Landscape Image */}
+      <div className="relative h-64 w-full overflow-hidden">
+        <img 
+          src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+          className="w-full h-full object-cover" 
+          alt="Landscape Background" 
+        />
+        {/* Subtle overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/10"></div>
+      </div>
 
-        {/* Floating Profile Card */}
-        <div className="absolute -bottom-1 left-4 right-4 z-20">
-          <div className="bg-white/80 backdrop-blur-xl rounded-[2rem] p-5 shadow-2xl shadow-black/10 border border-white/60 flex flex-col items-center text-center relative overflow-hidden">
-            {/* Glass Shine Effect */}
-            <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-white/40 to-transparent pointer-events-none"></div>
-            
-            <div className="-mt-12 mb-3 relative">
-              <div className="p-1.5 bg-white rounded-full shadow-lg">
-                <img 
-                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?fit=crop&w=300&h=300" 
-                  className="w-20 h-20 rounded-full object-cover border border-slate-100" 
-                  alt="王小明" 
-                />
-              </div>
-              <div className="absolute bottom-1 right-1 bg-green-500 w-5 h-5 rounded-full border-[3px] border-white shadow-sm flex items-center justify-center">
-                 <div className="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></div>
-              </div>
+      {/* Profile Card - Overlapping */}
+      <div className="px-4 -mt-20 relative z-10">
+        <div className="bg-white/90 backdrop-blur-xl rounded-[24px] p-5 shadow-xl border border-white/60 relative overflow-visible">
+          {/* Floating Avatar */}
+          <div className="absolute -top-10 left-5">
+            <div className="w-20 h-20 rounded-full border-[4px] border-white shadow-lg overflow-hidden bg-white ring-2 ring-blue-100">
+              <img 
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?fit=crop&w=200&h=200" 
+                className="w-full h-full object-cover" 
+                alt="王小明" 
+              />
             </div>
+            {/* Status Dot */}
+            <div className="absolute bottom-1 right-1 w-5 h-5 bg-green-500 border-[3px] border-white rounded-full shadow-sm"></div>
+          </div>
 
-            <h2 className="text-xl font-black text-slate-900 tracking-tight flex items-center justify-center mb-1">
-              王小明 
-              <span className="ml-1.5 bg-blue-600 text-white text-[9px] px-1.5 py-0.5 rounded-md font-bold shadow-sm shadow-blue-200">金牌向导</span>
-            </h2>
-            
-            <p className="text-[12px] font-medium text-slate-500 mb-4 px-2 line-clamp-2">
-              "专注贵州深度游5年，摄影/无人机/越野全能。带你避开人海，发现小众秘境。"
-            </p>
-
-            <div className="flex w-full space-x-2">
-              <button className="flex-1 bg-slate-900 text-white py-2.5 rounded-xl text-[11px] font-bold shadow-lg shadow-slate-200 active:scale-95 transition-transform flex items-center justify-center">
-                <MessageSquare size={14} className="mr-1.5" /> 在线咨询
-              </button>
-              <button className="flex-1 bg-white border border-slate-200 text-slate-700 py-2.5 rounded-xl text-[11px] font-bold shadow-sm active:bg-slate-50 transition-colors flex items-center justify-center">
-                <Share2 size={14} className="mr-1.5" /> 分享名片
-              </button>
-            </div>
+          {/* Info Content */}
+          <div className="pt-11"> 
+             <div className="flex items-center space-x-2">
+               <div className="text-blue-500">
+                 <Gem size={18} fill="currentColor" className="text-blue-500" />
+               </div>
+               <h2 className="text-xl font-black text-slate-900 tracking-tight">王小明</h2>
+             </div>
+             <p className="text-xs text-slate-500 mt-1.5 font-bold pl-0.5">金牌地陪 | 贵州旅游行程助手</p>
           </div>
         </div>
       </div>
 
-
+      {/* Welcome Bubble */}
+      <div className="px-4 mt-3 relative z-10">
+        <div className="bg-blue-50/80 backdrop-blur-sm p-4 rounded-[20px] rounded-tl-none border border-blue-100/50 shadow-sm relative ml-2">
+           {/* Little triangle for bubble effect */}
+           <div className="absolute -top-1.5 -left-1.5 w-4 h-4 bg-blue-50/80 border-t border-l border-blue-100/50 transform -rotate-45"></div>
+           <p className="text-[13px] text-slate-700 leading-relaxed font-bold">
+            "你好！我是金牌地陪小王。欢迎来到多彩贵州！关于旅行规划的任何小疑问，我都超乐意帮您解答呢！(๑•̀ㅂ•́)و✧"
+          </p>
+        </div>
+      </div>
 
       {/* Main Content Sections */}
       <div className="px-6 space-y-6 mt-4">
