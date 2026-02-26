@@ -163,62 +163,60 @@ const AgentMainPage: React.FC<{ navigateTo: (p: any) => void }> = ({ navigateTo 
 
   return (
     <div className="min-h-full bg-white flex flex-col relative pb-52">
-      {/* Header - REAL PERSON AVATAR */}
-      <div className="relative pt-10 pb-20 px-6 overflow-hidden bg-slate-50">
-        {/* Background Image with Overlay */}
+      {/* Header - IMMERSIVE BACKGROUND */}
+      <div className="relative h-[380px] w-full overflow-hidden">
+        {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
             className="w-full h-full object-cover" 
             alt="Landscape Background" 
           />
-          {/* Gradient Overlay for text readability - only at bottom */}
-          <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent"></div>
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-white"></div>
         </div>
 
-        <div className="relative z-10 flex flex-col items-center justify-center text-center mt-6">
-          <div className="relative mb-4">
-            <div className="w-28 h-28 bg-white/30 backdrop-blur-md rounded-full p-1.5 shadow-2xl animate-in zoom-in duration-500 ring-1 ring-white/50">
-              <img 
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?fit=crop&w=300&h=300" 
-                className="w-full h-full object-cover rounded-full border-4 border-white shadow-inner" 
-                alt="王小明" 
-              />
-            </div>
-            <div className="absolute bottom-2 right-2 bg-green-500 w-6 h-6 rounded-full border-4 border-white shadow-lg flex items-center justify-center">
-              <div className="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></div>
-            </div>
-          </div>
-          
-          <div className="space-y-2">
-            <div className="flex items-center justify-center space-x-2">
-              <h2 className="text-2xl font-black text-white drop-shadow-lg tracking-tight">王小明</h2>
-              <div className="bg-yellow-400/90 backdrop-blur-sm px-2 py-0.5 rounded-full shadow-lg flex items-center space-x-1 border border-yellow-300/50">
-                <Star size={10} fill="white" stroke="white" />
-                <span className="text-[10px] font-black text-white">金牌向导</span>
+        {/* Floating Profile Card */}
+        <div className="absolute -bottom-1 left-4 right-4 z-20">
+          <div className="bg-white/80 backdrop-blur-xl rounded-[2rem] p-5 shadow-2xl shadow-black/10 border border-white/60 flex flex-col items-center text-center relative overflow-hidden">
+            {/* Glass Shine Effect */}
+            <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-white/40 to-transparent pointer-events-none"></div>
+            
+            <div className="-mt-12 mb-3 relative">
+              <div className="p-1.5 bg-white rounded-full shadow-lg">
+                <img 
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?fit=crop&w=300&h=300" 
+                  className="w-20 h-20 rounded-full object-cover border border-slate-100" 
+                  alt="王小明" 
+                />
+              </div>
+              <div className="absolute bottom-1 right-1 bg-green-500 w-5 h-5 rounded-full border-[3px] border-white shadow-sm flex items-center justify-center">
+                 <div className="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></div>
               </div>
             </div>
-            <p className="text-base font-medium text-white/90 drop-shadow-md tracking-wide">"带你发现不一样的贵州，不仅是导游，更是你的旅拍搭子"</p>
+
+            <h2 className="text-xl font-black text-slate-900 tracking-tight flex items-center justify-center mb-1">
+              王小明 
+              <span className="ml-1.5 bg-blue-600 text-white text-[9px] px-1.5 py-0.5 rounded-md font-bold shadow-sm shadow-blue-200">金牌向导</span>
+            </h2>
+            
+            <p className="text-[12px] font-medium text-slate-500 mb-4 px-2 line-clamp-2">
+              "专注贵州深度游5年，摄影/无人机/越野全能。带你避开人海，发现小众秘境。"
+            </p>
+
+            <div className="flex w-full space-x-2">
+              <button className="flex-1 bg-slate-900 text-white py-2.5 rounded-xl text-[11px] font-bold shadow-lg shadow-slate-200 active:scale-95 transition-transform flex items-center justify-center">
+                <MessageSquare size={14} className="mr-1.5" /> 在线咨询
+              </button>
+              <button className="flex-1 bg-white border border-slate-200 text-slate-700 py-2.5 rounded-xl text-[11px] font-bold shadow-sm active:bg-slate-50 transition-colors flex items-center justify-center">
+                <Share2 size={14} className="mr-1.5" /> 分享名片
+              </button>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Intro Box */}
-      <div className="px-6 -mt-8 relative z-20">
-        <div className="bg-white/90 backdrop-blur-xl p-5 rounded-[2rem] border border-white/60 relative group shadow-2xl shadow-blue-900/10 ring-1 ring-white/50">
-          <div className="flex justify-between items-center mb-3">
-             <div className="flex space-x-1">
-                <span className="w-1.5 h-1.5 rounded-full bg-red-400"></span>
-                <span className="w-1.5 h-1.5 rounded-full bg-yellow-400"></span>
-                <span className="w-1.5 h-1.5 rounded-full bg-green-400"></span>
-             </div>
-             <span className="text-[9px] font-black text-slate-300 uppercase tracking-widest">About Me</span>
-          </div>
-          <p className="text-[13px] text-slate-600 leading-relaxed font-medium text-center">
-            "很高兴为您服务。作为金牌向导，我不仅带您领略贵州的绝美风光，还会帮您记录旅途中的每一刻美好。您可以随时问我行程或看样片。"
-          </p>
-        </div>
-      </div>
+
 
       {/* Main Content Sections */}
       <div className="px-6 space-y-6 mt-4">
