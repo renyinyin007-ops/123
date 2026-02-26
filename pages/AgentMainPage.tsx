@@ -164,14 +164,23 @@ const AgentMainPage: React.FC<{ navigateTo: (p: any) => void }> = ({ navigateTo 
   return (
     <div className="min-h-full bg-white flex flex-col relative pb-52">
       {/* Header - REAL PERSON AVATAR */}
-      <div className="relative pt-10 pb-6 px-6 overflow-hidden bg-gradient-to-b from-purple-100/50 via-blue-50/30 to-white">
-        <div className="absolute top-0 right-0 w-64 h-64 bg-purple-400/10 rounded-full blur-[100px] -mr-20 -mt-20"></div>
+      <div className="relative pt-10 pb-6 px-6 overflow-hidden bg-slate-50">
+        {/* Modern Gradient Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-100/40 via-indigo-50/40 to-white opacity-80"></div>
         
+        {/* Decorative Orbs */}
+        <div className="absolute -top-24 -right-24 w-80 h-80 bg-blue-400/20 rounded-full blur-[60px] mix-blend-multiply animate-pulse"></div>
+        <div className="absolute top-20 -left-20 w-60 h-60 bg-purple-400/20 rounded-full blur-[60px] mix-blend-multiply opacity-70"></div>
+        <div className="absolute bottom-0 right-1/4 w-40 h-40 bg-pink-300/20 rounded-full blur-[40px] mix-blend-multiply opacity-60"></div>
+        
+        {/* Mesh Grid Pattern (Optional subtle texture) */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] mask-image-gradient-to-b"></div>
+
         <div className="relative z-10 flex items-center space-x-5">
           <div className="relative">
             <div className="w-20 h-20 bg-white rounded-[2rem] overflow-hidden border-4 border-white shadow-2xl flex-shrink-0 animate-in zoom-in duration-500">
               <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=200&h=200" 
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?fit=crop&w=200&h=200" 
                 className="w-full h-full object-cover" 
                 alt="王小明" 
               />

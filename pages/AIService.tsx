@@ -261,7 +261,7 @@ const ConversationDetailView: React.FC<{ session: Session; onBack: () => void }>
                   <div className="relative pt-2">
                     <div className="w-20 h-20 rounded-[1.5rem] overflow-hidden border-2 border-white shadow-lg">
                       <img 
-                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=200&h=200" 
+                        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?fit=crop&w=200&h=200" 
                         className="w-full h-full object-cover"
                         alt="Agent" 
                       />
