@@ -176,33 +176,45 @@ const AgentMainPage: React.FC<{ navigateTo: (p: any) => void }> = ({ navigateTo 
           <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent"></div>
         </div>
 
-        <div className="relative z-10 flex items-center space-x-5">
-          <div className="relative">
-            <div className="w-20 h-20 bg-white rounded-[2rem] overflow-hidden border-4 border-white shadow-2xl flex-shrink-0 animate-in zoom-in duration-500">
+        <div className="relative z-10 flex flex-col items-center justify-center text-center mt-6">
+          <div className="relative mb-4">
+            <div className="w-28 h-28 bg-white/30 backdrop-blur-md rounded-full p-1.5 shadow-2xl animate-in zoom-in duration-500 ring-1 ring-white/50">
               <img 
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?fit=crop&w=200&h=200" 
-                className="w-full h-full object-cover" 
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?fit=crop&w=300&h=300" 
+                className="w-full h-full object-cover rounded-full border-4 border-white shadow-inner" 
                 alt="王小明" 
               />
             </div>
-            <div className="absolute -bottom-1 -right-1 bg-green-500 w-6 h-6 rounded-full border-4 border-white shadow-sm"></div>
+            <div className="absolute bottom-2 right-2 bg-green-500 w-6 h-6 rounded-full border-4 border-white shadow-lg flex items-center justify-center">
+              <div className="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></div>
+            </div>
           </div>
-          <div className="flex-1">
-            <div className="flex items-center space-x-1.5">
-              <h2 className="text-xl font-black text-slate-900 tracking-tight">王小明</h2>
-              <div className="bg-yellow-400 p-1 rounded-lg shadow-sm">
+          
+          <div className="space-y-2">
+            <div className="flex items-center justify-center space-x-2">
+              <h2 className="text-2xl font-black text-white drop-shadow-lg tracking-tight">王小明</h2>
+              <div className="bg-yellow-400/90 backdrop-blur-sm px-2 py-0.5 rounded-full shadow-lg flex items-center space-x-1 border border-yellow-300/50">
                 <Star size={10} fill="white" stroke="white" />
+                <span className="text-[10px] font-black text-white">金牌向导</span>
               </div>
             </div>
-            <p className="text-[16px] font-black text-blue-700 mt-1 drop-shadow-sm">你好！我是金牌地陪小王</p>
+            <p className="text-base font-medium text-white/90 drop-shadow-md tracking-wide">"带你发现不一样的贵州，不仅是导游，更是你的旅拍搭子"</p>
           </div>
         </div>
       </div>
 
       {/* Intro Box */}
-      <div className="px-6 -mt-12 relative z-20">
-        <div className="bg-white/80 backdrop-blur-md p-5 rounded-3xl border border-white/50 relative group shadow-lg shadow-blue-900/5">
-          <p className="text-[12px] text-slate-700 leading-relaxed font-bold italic">
+      <div className="px-6 -mt-8 relative z-20">
+        <div className="bg-white/90 backdrop-blur-xl p-5 rounded-[2rem] border border-white/60 relative group shadow-2xl shadow-blue-900/10 ring-1 ring-white/50">
+          <div className="flex justify-between items-center mb-3">
+             <div className="flex space-x-1">
+                <span className="w-1.5 h-1.5 rounded-full bg-red-400"></span>
+                <span className="w-1.5 h-1.5 rounded-full bg-yellow-400"></span>
+                <span className="w-1.5 h-1.5 rounded-full bg-green-400"></span>
+             </div>
+             <span className="text-[9px] font-black text-slate-300 uppercase tracking-widest">About Me</span>
+          </div>
+          <p className="text-[13px] text-slate-600 leading-relaxed font-medium text-center">
             "很高兴为您服务。作为金牌向导，我不仅带您领略贵州的绝美风光，还会帮您记录旅途中的每一刻美好。您可以随时问我行程或看样片。"
           </p>
         </div>
