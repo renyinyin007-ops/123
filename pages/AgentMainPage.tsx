@@ -172,8 +172,8 @@ const AgentMainPage: React.FC<{ navigateTo: (p: any) => void }> = ({ navigateTo 
             className="w-full h-full object-cover" 
             alt="Landscape Background" 
           />
-          {/* Gradient Overlay for text readability */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-white/40 to-white"></div>
+          {/* Gradient Overlay for text readability - only at bottom */}
+          <div className="absolute inset-0 bg-gradient-to-t from-white via-white/60 to-transparent"></div>
         </div>
 
         <div className="relative z-10 flex items-center space-x-5">
