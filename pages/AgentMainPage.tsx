@@ -178,8 +178,8 @@ const AgentMainPage: React.FC<{ navigateTo: (p: any) => void }> = ({ navigateTo 
       <div className="px-4 -mt-16 relative z-10">
         <div className="bg-white/90 backdrop-blur-xl rounded-[24px] p-5 shadow-xl border border-white/60 relative overflow-visible">
           {/* Floating Avatar */}
-          <div className="absolute -top-10 left-5">
-            <div className="w-20 h-20 rounded-full border-[4px] border-white shadow-lg overflow-hidden bg-white ring-2 ring-blue-100">
+          <div className="absolute -top-6 left-5">
+            <div className="w-16 h-16 rounded-full border-[3px] border-white shadow-lg overflow-hidden bg-white ring-1 ring-blue-50">
               <img 
                 src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?fit=crop&w=200&h=200" 
                 className="w-full h-full object-cover" 
@@ -187,18 +187,18 @@ const AgentMainPage: React.FC<{ navigateTo: (p: any) => void }> = ({ navigateTo 
               />
             </div>
             {/* Status Dot */}
-            <div className="absolute bottom-1 right-1 w-5 h-5 bg-green-500 border-[3px] border-white rounded-full shadow-sm"></div>
+            <div className="absolute bottom-0.5 right-0.5 w-4 h-4 bg-green-500 border-[2px] border-white rounded-full shadow-sm"></div>
           </div>
 
-          {/* Info Content */}
-          <div className="pt-11"> 
+          {/* Info Content - Horizontal Layout */}
+          <div className="pl-20 pt-1"> 
              <div className="flex items-center space-x-2">
-               <div className="text-blue-500">
-                 <Gem size={18} fill="currentColor" className="text-blue-500" />
+               <h2 className="text-lg font-black text-slate-900 tracking-tight">王小明</h2>
+               <div className="text-blue-500 bg-blue-50 p-1 rounded-md">
+                 <Gem size={14} fill="currentColor" className="text-blue-500" />
                </div>
-               <h2 className="text-xl font-black text-slate-900 tracking-tight">王小明</h2>
              </div>
-             <p className="text-xs text-slate-500 mt-1.5 font-bold pl-0.5">金牌地陪 | 贵州旅游行程助手</p>
+             <p className="text-[10px] text-slate-500 mt-1 font-bold">金牌地陪 | 贵州旅游行程助手</p>
           </div>
         </div>
       </div>
