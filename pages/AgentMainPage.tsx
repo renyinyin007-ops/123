@@ -164,7 +164,7 @@ const AgentMainPage: React.FC<{ navigateTo: (p: any) => void }> = ({ navigateTo 
   return (
     <div className="min-h-full bg-white flex flex-col relative pb-52">
       {/* Header - REAL PERSON AVATAR */}
-      <div className="relative pt-10 pb-6 px-6 overflow-hidden bg-slate-50">
+      <div className="relative pt-10 pb-20 px-6 overflow-hidden bg-slate-50">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
@@ -173,7 +173,7 @@ const AgentMainPage: React.FC<{ navigateTo: (p: any) => void }> = ({ navigateTo 
             alt="Landscape Background" 
           />
           {/* Gradient Overlay for text readability - only at bottom */}
-          <div className="absolute inset-0 bg-gradient-to-t from-white via-white/60 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent"></div>
         </div>
 
         <div className="relative z-10 flex items-center space-x-5">
@@ -200,8 +200,8 @@ const AgentMainPage: React.FC<{ navigateTo: (p: any) => void }> = ({ navigateTo 
       </div>
 
       {/* Intro Box */}
-      <div className="px-6 py-2">
-        <div className="bg-slate-50/80 backdrop-blur-sm p-4 rounded-2xl border border-slate-100 relative group border-l-4 border-l-blue-500 shadow-sm">
+      <div className="px-6 -mt-12 relative z-20">
+        <div className="bg-white/80 backdrop-blur-md p-5 rounded-3xl border border-white/50 relative group shadow-lg shadow-blue-900/5">
           <p className="text-[12px] text-slate-700 leading-relaxed font-bold italic">
             "很高兴为您服务。作为金牌向导，我不仅带您领略贵州的绝美风光，还会帮您记录旅途中的每一刻美好。您可以随时问我行程或看样片。"
           </p>
@@ -210,23 +210,6 @@ const AgentMainPage: React.FC<{ navigateTo: (p: any) => void }> = ({ navigateTo 
 
       {/* Main Content Sections */}
       <div className="px-6 space-y-6 mt-4">
-        {/* Booking Code */}
-        <div className="bg-white rounded-2xl p-2 border border-slate-100 shadow-md flex items-center group focus-within:ring-2 focus-within:ring-blue-100 transition-all">
-          <div className="bg-indigo-600/10 p-2.5 rounded-xl mr-3 group-hover:scale-110 transition-transform">
-             <Calendar size={18} className="text-indigo-600" />
-          </div>
-          <input 
-            type="text" 
-            placeholder="输入 6 位预约确认码"
-            value={bookingCode}
-            onChange={e => setBookingCode(e.target.value)}
-            className="bg-transparent border-0 flex-1 px-1 py-1.5 text-xs focus:outline-none placeholder-gray-400 font-mono font-black"
-          />
-          <button className="bg-indigo-600 text-white text-[10px] font-black px-4 py-2.5 rounded-xl shadow-lg shadow-indigo-100 active:scale-95 transition-transform ml-2">
-            确认行程
-          </button>
-        </div>
-
         {/* Professional Skills */}
         <div className="space-y-3">
            <h4 className="text-[12px] font-black text-slate-800 flex items-center px-1">
